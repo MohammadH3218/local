@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 150 40% 98%;
+    --foreground: 160 18% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 160 18% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 18% 12%;
+
+    --primary: 160 84% 34%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 160 20% 96%;
+    --secondary-foreground: 160 18% 15%;
+
+    --muted: 160 22% 94%;
+    --muted-foreground: 160 10% 40%;
+
+    --accent: 160 60% 90%;
+    --accent-foreground: 160 35% 18%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 160 16% 86%;
+    --input: 160 20% 90%;
+
+    --ring: 160 84% 34%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-white text-foreground;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  /* ── Range slider (pricing calculator) ── */
+  .calc-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    border-radius: 9999px;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    margin: 0;
+  }
+
+  .calc-slider::-webkit-slider-runnable-track {
+    height: 8px;
+    border-radius: 9999px;
+    background: transparent;
+  }
+
+  .calc-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 9999px;
+    background: white;
+    border: 3px solid #059669;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+    cursor: grab;
+    margin-top: -6px;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+  }
+
+  .calc-slider::-webkit-slider-thumb:hover {
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.18), 0 0 0 4px rgba(5, 150, 105, 0.1);
+    transform: scale(1.15);
+  }
+
+  .calc-slider::-webkit-slider-thumb:active {
+    cursor: grabbing;
+    transform: scale(1.05);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.18), 0 0 0 4px rgba(5, 150, 105, 0.15);
+  }
+
+  .calc-slider::-moz-range-track {
+    height: 8px;
+    border-radius: 9999px;
+    background: transparent;
+    border: none;
+  }
+
+  .calc-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 9999px;
+    background: white;
+    border: 3px solid #059669;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+    cursor: grab;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+  }
+
+  .calc-slider::-moz-range-thumb:hover {
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.18), 0 0 0 4px rgba(5, 150, 105, 0.1);
+  }
+}

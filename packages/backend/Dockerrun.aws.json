@@ -1,0 +1,14 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "982081079378.dkr.ecr.us-east-1.amazonaws.com/handycall-backend:20260301-072743-amd64",
+    "Update": "true"
+  },
+  "Ports": [
+    {
+      "ContainerPort": 8080,
+      "HostPort": 80
+    }
+  ],
+  "Logging": "/var/log/nginx"
+}

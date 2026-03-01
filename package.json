@@ -1,0 +1,40 @@
+{
+  "name": "handycall",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Multi-tenant AI Receptionist Platform for Local Service Businesses",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present && rm -rf node_modules",
+    "local:start": "./scripts/local/start-local-dev.sh",
+    "local:stop": "./scripts/local/stop-local-dev.sh",
+    "local:bootstrap": "./scripts/local/bootstrap-localstack.sh",
+    "backend:dev": "npm run dev -w packages/backend",
+    "web:dev": "npm run dev -w packages/web",
+    "mobile:dev": "npm run dev -w packages/mobile",
+    "shared:build": "npm run build -w packages/shared",
+    "qa:api-probe": "node scripts/qa/api-surface-probe.mjs",
+    "qa:stress:web": "npx autocannon -c 25 -d 20 -p 10 http://localhost:3001/",
+    "qa:stress:api": "npx autocannon -c 40 -d 20 -p 10 http://localhost:3000/api/v1/health"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "eslint": "^8.56.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cloudwatch-logs": "^3.965.0",
+    "stripe": "^17.7.0"
+  }
+}

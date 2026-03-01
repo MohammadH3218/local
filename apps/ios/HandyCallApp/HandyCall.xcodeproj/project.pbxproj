@@ -1,0 +1,518 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 63;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		050F54DCF5AAC899C139A236 /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E19222D091943EDB0C229F /* PushNotificationManager.swift */; };
+		10A2A36A4E194A7D9F4371C2 /* SocialAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B201E19BB32430F95D222A7 /* SocialAuthManager.swift */; };
+		144F98D3C1C72B492603E354 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A656F576F626DB193A8B4C30 /* DashboardView.swift */; };
+		24BA09BBBFB5048AAF2508D5 /* ToastBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D5C1C7F9FAF38CFC167793 /* ToastBanner.swift */; };
+		A1B2C3D4E5F6A7B8C9D0E1F2 /* SharedComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E2D3C4B5A6978869504132 /* SharedComponents.swift */; };
+		2B3DE70548541DB8A89A8136 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7BF13F94FBB9F4282DA9EC /* MainTabView.swift */; };
+		32614CA84ED7834562ECC163 /* NotificationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD52B483802CF84BA2FB310C /* NotificationModels.swift */; };
+		3982ABBDEDCB56F48963974F /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421D436D04BC1CCFC571BC6D /* SessionStore.swift */; };
+		49A7A8F06720281957240839 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E6313B3EF64EB5BFC3D474 /* NotificationsView.swift */; };
+		4DB8E861B163601DFE74E2F2 /* HandyCallAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21DDB30222DB3C29C5BC1CE /* HandyCallAppDelegate.swift */; };
+		565B65EEFA90E4D684CD8A03 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C0F62F1930924D79A3A09 /* SettingsView.swift */; };
+		655843A6338E9160C9DB2A83 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18B2ECCF5C8637E55A73CD1 /* APIClient.swift */; };
+		86E41EDF31FBC923AC056274 /* HandyCallTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A319B2B01A60BB808502ABB1 /* HandyCallTheme.swift */; };
+		8A5CF6954AA5E006DFEE0516 /* DomainModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899CA1E6E8C082760188DB50 /* DomainModels.swift */; };
+		95E40704146B95F42B8BF00D /* CallsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA128D9D9B176797AAABF1B /* CallsView.swift */; };
+		970B5E2EA3050E3CEA782472 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A90724B4A080521B0A96F5 /* KeychainStore.swift */; };
+		A95AB70C34361B70E68185A8 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E4B632458BFCDE47BDD3CE /* ContactsView.swift */; };
+		ADFD3EF3EA2BE07DC904EFEE /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2872FA2780617C4CC6BB6D70 /* AppConfig.swift */; };
+		BED05376E4EF195F88D676CC /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4022915025FE74B6E9D9BE2 /* RootView.swift */; };
+		C0E1A1D589D7458EFD15283B /* HandyCallApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E63C5C0921759A76A88CCAE /* HandyCallApp.swift */; };
+		D5D0B66927F148783B77C1A7 /* AuthModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE59FB3E6485C61792B4C5 /* AuthModels.swift */; };
+		DCA94F86B7AC511902460563 /* NotificationPreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35BC16AE1BF9E8258E56817 /* NotificationPreferencesView.swift */; };
+		E8A5AF392BCF25169D807B0F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22EA15A7041DB454507BCC /* LoginView.swift */; };
+		EDFB6C57D6D59E81E0DB2BA7 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2457BCF47FD3877180473621 /* AppContainer.swift */; };
+		FD9174062AA1ADE87875E682 /* AppointmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD01C49B9E6870F08B34FE1 /* AppointmentsView.swift */; };
+		4974C10B06E745C3FEFD8611 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C9E7CF50786EF9B1C23CA2 /* MessagesView.swift */; };
+				2D430EF1B272CC8C1DE0AE90 /* KnowledgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4AC44B9A9F835D1C82DD2D /* KnowledgeView.swift */; };
+				AC626FC0D625CF8F631F281B /* UsageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A409956ED02BBC711460572 /* UsageView.swift */; };
+		/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0FD01C49B9E6870F08B34FE1 /* AppointmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsView.swift; sourceTree = "<group>"; };
+		225C0F62F1930924D79A3A09 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		2457BCF47FD3877180473621 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		2872FA2780617C4CC6BB6D70 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		2B9D47054945DA72A0CD11D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3E63C5C0921759A76A88CCAE /* HandyCallApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyCallApp.swift; sourceTree = "<group>"; };
+		421D436D04BC1CCFC571BC6D /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		70E4B632458BFCDE47BDD3CE /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		77D5C1C7F9FAF38CFC167793 /* ToastBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastBanner.swift; sourceTree = "<group>"; };
+		F1E2D3C4B5A6978869504132 /* SharedComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedComponents.swift; sourceTree = "<group>"; };
+		86A90724B4A080521B0A96F5 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		899CA1E6E8C082760188DB50 /* DomainModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainModels.swift; sourceTree = "<group>"; };
+		9B201E19BB32430F95D222A7 /* SocialAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialAuthManager.swift; sourceTree = "<group>"; };
+		9DA128D9D9B176797AAABF1B /* CallsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsView.swift; sourceTree = "<group>"; };
+		9E7BF13F94FBB9F4282DA9EC /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		A21DDB30222DB3C29C5BC1CE /* HandyCallAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyCallAppDelegate.swift; sourceTree = "<group>"; };
+		A319B2B01A60BB808502ABB1 /* HandyCallTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandyCallTheme.swift; sourceTree = "<group>"; };
+		A656F576F626DB193A8B4C30 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		AEFE59FB3E6485C61792B4C5 /* AuthModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModels.swift; sourceTree = "<group>"; };
+		B2E6313B3EF64EB5BFC3D474 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		B35BC16AE1BF9E8258E56817 /* NotificationPreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPreferencesView.swift; sourceTree = "<group>"; };
+		B3E19222D091943EDB0C229F /* PushNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
+		BF22EA15A7041DB454507BCC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C18B2ECCF5C8637E55A73CD1 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		C39F3C5640C8489470D6CA87 /* HandyCall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandyCall.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD52B483802CF84BA2FB310C /* NotificationModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModels.swift; sourceTree = "<group>"; };
+		F4022915025FE74B6E9D9BE2 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		97C9E7CF50786EF9B1C23CA2 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Features/Messages/MessagesView.swift; sourceTree = SOURCE_ROOT; };
+				4F4AC44B9A9F835D1C82DD2D /* KnowledgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Features/Knowledge/KnowledgeView.swift; sourceTree = SOURCE_ROOT; };
+				1A409956ED02BBC711460572 /* UsageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Features/Usage/UsageView.swift; sourceTree = SOURCE_ROOT; };
+		/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		1791692BAC0FEA10C4E573B5 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				2B9D47054945DA72A0CD11D2 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		1C455F30174093FEAA9063FA /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				B2E6313B3EF64EB5BFC3D474 /* NotificationsView.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		1E457A37BC15260881EA2DAE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B35BC16AE1BF9E8258E56817 /* NotificationPreferencesView.swift */,
+				225C0F62F1930924D79A3A09 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		2A2FDF9E8DF273939DBBCF4C /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				A319B2B01A60BB808502ABB1 /* HandyCallTheme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		6BD01DC04ECCA2D0D1CE212E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AEFE59FB3E6485C61792B4C5 /* AuthModels.swift */,
+				899CA1E6E8C082760188DB50 /* DomainModels.swift */,
+				DD52B483802CF84BA2FB310C /* NotificationModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7658644F4702260FDBC6A16D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C39F3C5640C8489470D6CA87 /* HandyCall.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84DBECA325BAF79356C52EF6 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				DDAFB9F7E1E9B071BE49F0DC /* Appointments */,
+				F796B48EF2B39D888A8A24F5 /* Auth */,
+				A394F561CD1B7C0CD030234B /* Calls */,
+				DFB17DF413E615733DD893C3 /* Contacts */,
+				B9941C5283035C1CD07559BB /* Dashboard */,
+				1C455F30174093FEAA9063FA /* Notifications */,
+				1E457A37BC15260881EA2DAE /* Settings */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		8DD9786C12EFA3458791FD01 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3E63C5C0921759A76A88CCAE /* HandyCallApp.swift */,
+				A21DDB30222DB3C29C5BC1CE /* HandyCallAppDelegate.swift */,
+				9E7BF13F94FBB9F4282DA9EC /* MainTabView.swift */,
+				F4022915025FE74B6E9D9BE2 /* RootView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9DFB5FF7AAB11ACED3CF50A0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C18B2ECCF5C8637E55A73CD1 /* APIClient.swift */,
+				2872FA2780617C4CC6BB6D70 /* AppConfig.swift */,
+				2457BCF47FD3877180473621 /* AppContainer.swift */,
+				86A90724B4A080521B0A96F5 /* KeychainStore.swift */,
+				B3E19222D091943EDB0C229F /* PushNotificationManager.swift */,
+				9B201E19BB32430F95D222A7 /* SocialAuthManager.swift */,
+				421D436D04BC1CCFC571BC6D /* SessionStore.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A394F561CD1B7C0CD030234B /* Calls */ = {
+			isa = PBXGroup;
+			children = (
+				9DA128D9D9B176797AAABF1B /* CallsView.swift */,
+			);
+			path = Calls;
+			sourceTree = "<group>";
+		};
+		A8976E7E03EA9058CEA4EE25 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8DD9786C12EFA3458791FD01 /* App */,
+				9DFB5FF7AAB11ACED3CF50A0 /* Core */,
+				84DBECA325BAF79356C52EF6 /* Features */,
+				6BD01DC04ECCA2D0D1CE212E /* Models */,
+				BF98732B04E1E15A86AD4032 /* Shared */,
+				1791692BAC0FEA10C4E573B5 /* Support */,
+				2A2FDF9E8DF273939DBBCF4C /* Theme */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B9941C5283035C1CD07559BB /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				A656F576F626DB193A8B4C30 /* DashboardView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		BF98732B04E1E15A86AD4032 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F1E2D3C4B5A6978869504132 /* SharedComponents.swift */,
+				77D5C1C7F9FAF38CFC167793 /* ToastBanner.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		DDAFB9F7E1E9B071BE49F0DC /* Appointments */ = {
+			isa = PBXGroup;
+			children = (
+				0FD01C49B9E6870F08B34FE1 /* AppointmentsView.swift */,
+			);
+			path = Appointments;
+			sourceTree = "<group>";
+		};
+		DFB17DF413E615733DD893C3 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				70E4B632458BFCDE47BDD3CE /* ContactsView.swift */,
+				1A409956ED02BBC711460572 /* UsageView.swift */,
+				4F4AC44B9A9F835D1C82DD2D /* KnowledgeView.swift */,
+				97C9E7CF50786EF9B1C23CA2 /* MessagesView.swift */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		F796B48EF2B39D888A8A24F5 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				BF22EA15A7041DB454507BCC /* LoginView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		F8E0639974F4E0EF52B5F3CF = {
+			isa = PBXGroup;
+			children = (
+				A8976E7E03EA9058CEA4EE25 /* Sources */,
+				7658644F4702260FDBC6A16D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		42452E143A555E882D2C11C9 /* HandyCall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 707D560F5F38274B0313485D /* Build configuration list for PBXNativeTarget "HandyCall" */;
+			buildPhases = (
+				9E0A022E68773AB402789602 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HandyCall;
+			packageProductDependencies = (
+			);
+			productName = HandyCall;
+			productReference = C39F3C5640C8489470D6CA87 /* HandyCall.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FBAF25DEA52EA32C4A6582E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					42452E143A555E882D2C11C9 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F1EDE220D64B8E97EFCD5EAA /* Build configuration list for PBXProject "HandyCall" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = F8E0639974F4E0EF52B5F3CF;
+			minimizedProjectReferenceProxies = 1;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42452E143A555E882D2C11C9 /* HandyCall */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9E0A022E68773AB402789602 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				655843A6338E9160C9DB2A83 /* APIClient.swift in Sources */,
+				ADFD3EF3EA2BE07DC904EFEE /* AppConfig.swift in Sources */,
+				EDFB6C57D6D59E81E0DB2BA7 /* AppContainer.swift in Sources */,
+				FD9174062AA1ADE87875E682 /* AppointmentsView.swift in Sources */,
+				D5D0B66927F148783B77C1A7 /* AuthModels.swift in Sources */,
+				95E40704146B95F42B8BF00D /* CallsView.swift in Sources */,
+				AC626FC0D625CF8F631F281B /* UsageView.swift in Sources */,
+				2D430EF1B272CC8C1DE0AE90 /* KnowledgeView.swift in Sources */,
+				4974C10B06E745C3FEFD8611 /* MessagesView.swift in Sources */,
+				A95AB70C34361B70E68185A8 /* ContactsView.swift in Sources */,
+				144F98D3C1C72B492603E354 /* DashboardView.swift in Sources */,
+				8A5CF6954AA5E006DFEE0516 /* DomainModels.swift in Sources */,
+				C0E1A1D589D7458EFD15283B /* HandyCallApp.swift in Sources */,
+				4DB8E861B163601DFE74E2F2 /* HandyCallAppDelegate.swift in Sources */,
+				86E41EDF31FBC923AC056274 /* HandyCallTheme.swift in Sources */,
+				970B5E2EA3050E3CEA782472 /* KeychainStore.swift in Sources */,
+				E8A5AF392BCF25169D807B0F /* LoginView.swift in Sources */,
+				2B3DE70548541DB8A89A8136 /* MainTabView.swift in Sources */,
+				32614CA84ED7834562ECC163 /* NotificationModels.swift in Sources */,
+				DCA94F86B7AC511902460563 /* NotificationPreferencesView.swift in Sources */,
+				49A7A8F06720281957240839 /* NotificationsView.swift in Sources */,
+				050F54DCF5AAC899C139A236 /* PushNotificationManager.swift in Sources */,
+				BED05376E4EF195F88D676CC /* RootView.swift in Sources */,
+				3982ABBDEDCB56F48963974F /* SessionStore.swift in Sources */,
+				10A2A36A4E194A7D9F4371C2 /* SocialAuthManager.swift in Sources */,
+				565B65EEFA90E4D684CD8A03 /* SettingsView.swift in Sources */,
+				A1B2C3D4E5F6A7B8C9D0E1F2 /* SharedComponents.swift in Sources */,
+				24BA09BBBFB5048AAF2508D5 /* ToastBanner.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		02AC2C9281C1F76BDB608026 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V837WL34MG;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.handycall.app;
+				PRODUCT_NAME = HandyCall;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		46FA8D0A0FFBAFAA2A63D8BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V837WL34MG;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.handycall.app;
+				PRODUCT_NAME = HandyCall;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9BD934922C82230C1860CA87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E9BD636AF35D001E5171B9A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		707D560F5F38274B0313485D /* Build configuration list for PBXNativeTarget "HandyCall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02AC2C9281C1F76BDB608026 /* Debug */,
+				46FA8D0A0FFBAFAA2A63D8BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F1EDE220D64B8E97EFCD5EAA /* Build configuration list for PBXProject "HandyCall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BD934922C82230C1860CA87 /* Debug */,
+				E9BD636AF35D001E5171B9A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FBAF25DEA52EA32C4A6582E5 /* Project object */;
+}

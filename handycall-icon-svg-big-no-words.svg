@@ -1,0 +1,25 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="badgeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#34d399"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Rounded square badge -->
+  <rect x="40" y="70" width="340" height="340" rx="70" fill="url(#badgeGradient)"/>
+  
+  <!-- H letter -->
+  <rect x="80" y="130" width="36" height="200" rx="18" fill="white"/>
+  <rect x="176" y="130" width="36" height="200" rx="18" fill="white"/>
+  <rect x="80" y="212" width="132" height="36" rx="18" fill="white"/>
+  
+  <!-- C letter - thicker, more visible -->
+  <path d="M230 240 C230 180, 270 140, 330 140 C350 140, 368 146, 380 156 L380 200 C368 188, 350 180, 330 180 C295 180, 270 205, 270 240 C270 275, 295 300, 330 300 C350 300, 368 292, 380 280 L380 324 C368 334, 350 340, 330 340 C270 340, 230 300, 230 240 Z" fill="white"/>
+  
+  <!-- Signal waves -->
+  <g stroke="#10b981" stroke-width="16" fill="none" stroke-linecap="round">
+    <path d="M400 190 C440 215, 440 265, 400 290" opacity="0.9"/>
+    <path d="M440 145 C505 190, 505 290, 440 335" opacity="0.6"/>
+  </g>
+</svg>

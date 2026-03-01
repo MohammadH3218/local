@@ -1,0 +1,116 @@
+export type ServiceGroup = {
+  key: string;
+  title: string;
+  description: string;
+  services: string[];
+};
+
+export const HOME_SERVICE_GROUPS: ServiceGroup[] = [
+  {
+    key: 'core-repair',
+    title: 'Core Repair & Maintenance',
+    description: 'High-demand repair and routine maintenance work for most homes.',
+    services: [
+      'Handyman',
+      'Plumbing',
+      'HVAC',
+      'Electrical',
+      'Appliance Repair',
+      'Garage Door',
+      'Locksmith',
+      'Roofing',
+      'Flooring',
+      'Painting',
+      'Remodeling',
+      'Concrete',
+      'Fencing',
+      'Drywall Repair',
+      'Door & Window Repair',
+      'Water Heater Service',
+      'Drain Cleaning',
+      'Sewer Line Service',
+    ],
+  },
+  {
+    key: 'cleaning-sanitation',
+    title: 'Cleaning & Sanitation',
+    description: 'Interior, exterior, deep-clean, and specialty cleaning services.',
+    services: [
+      'Cleaning',
+      'Carpet Cleaning',
+      'Window Cleaning',
+      'Pressure Washing',
+      'Post-Construction Cleaning',
+      'Move-In / Move-Out Cleaning',
+      'Gutter Cleaning',
+      'Chimney Cleaning',
+      'Duct Cleaning',
+      'Mold Remediation',
+      'Biohazard Cleanup',
+      'Odor Removal',
+    ],
+  },
+  {
+    key: 'lawn-exterior',
+    title: 'Lawn, Landscape & Exterior',
+    description: 'Outdoor upkeep, landscaping, and seasonal property services.',
+    services: [
+      'Landscaping',
+      'Lawn Care',
+      'Tree Service',
+      'Irrigation',
+      'Snow Removal',
+      'Pool Service',
+      'Pest Control',
+      'Junk Removal',
+      'Outdoor Lighting',
+      'Deck & Patio Repair',
+      'Retaining Wall Service',
+      'Sod Installation',
+      'Stump Grinding',
+      'Septic Service',
+      'Well Pump Service',
+    ],
+  },
+  {
+    key: 'installation-upgrades',
+    title: 'Installations & Upgrades',
+    description: 'New installs, smart-home upgrades, and efficiency improvements.',
+    services: [
+      'Solar',
+      'Security Systems',
+      'Smart Home Setup',
+      'EV Charger Installation',
+      'Generator Installation',
+      'Home Automation',
+      'Insulation Installation',
+      'Water Filtration Systems',
+      'Home Theater Setup',
+      'Camera & Access Control',
+      'Fireplace Installation',
+    ],
+  },
+  {
+    key: 'logistics-specialty',
+    title: 'Logistics & Specialty Services',
+    description: 'Support services that are less frequent but still critical.',
+    services: [
+      'Moving',
+      'Auto Mechanic',
+      'Holiday Lighting Installation',
+      'Window Film / Tinting',
+      'Radon Mitigation',
+      'Basement Waterproofing',
+      'Foundation Repair',
+      'Asphalt Repair',
+      'Masonry Repair',
+      'Glass & Mirror Repair',
+      'Animal / Wildlife Removal',
+      'Other',
+    ],
+  },
+];
+
+export const ALL_HOME_SERVICES = Array.from(
+  new Set(HOME_SERVICE_GROUPS.flatMap((group) => group.services)),
+).sort((a, b) => a.localeCompare(b));

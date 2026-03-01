@@ -1,0 +1,30 @@
+services:
+  web:
+    image: 982081079378.dkr.ecr.us-east-1.amazonaws.com/handycall-backend:20260103-jwks
+    ports:
+      - "80:8080"
+    environment:
+      - NODE_ENV=production
+      - PORT=8080
+      - API_PREFIX=api/v1
+      - AWS_REGION=us-east-1
+      - DYNAMODB_TABLE_PREFIX=handycall_prod_
+      - S3_BUCKET_RECORDINGS=handycall-recordings-prod
+      - S3_BUCKET_TRANSCRIPTS=handycall-transcripts-prod
+      - JWT_SECRET=your-super-secret-jwt-key-change-in-production
+      - JWT_EXPIRES_IN=3600
+      - REFRESH_TOKEN_SECRET=your-super-secret-refresh-token-key
+      - REFRESH_TOKEN_EXPIRES_IN=2592000
+      - CORS_ORIGINS=http://localhost:3001,http://localhost:3000,https://handycall.org,https://www.handycall.org
+      - AWS_COGNITO_USERS_POOL_ID=us-east-1_gBsGtRPnM
+      - AWS_COGNITO_USERS_CLIENT_ID=3vhh0artoakoardoi4e9rdm3m9
+      - AWS_COGNITO_USERS_CLIENT_SECRET=8o80uspsmcio3l3djrdnipfherabr8qj6g7jv8jmjhqo2v92cdg
+      - AWS_COGNITO_ADMIN_POOL_ID=us-east-1_87I5bQxUW
+      - AWS_COGNITO_ADMIN_CLIENT_ID=3drpp2cjdgtkodoj0d3udh5nu1
+      - AWS_COGNITO_ADMIN_CLIENT_SECRET=1cue7s8otm0dhtc2davjd0o3p2fuu1k52si7jfvlvd54r9l8rrib
+      - AWS_COGNITO_CUSTOMER_POOL_ID=us-east-1_v08KHH5np
+      - AWS_COGNITO_CUSTOMER_CLIENT_ID=3u3ktbcsqlb31uosk4cirvl678
+      - AWS_COGNITO_CUSTOMER_CLIENT_SECRET=1pubmg2q24gtg2hvrijvolu0pik8da8hjpu0trd7tgn3ab3gg2g8
+      - BEDROCK_MODEL_ID=anthropic.claude-3-5-sonnet-20241022-v2:0
+      - BEDROCK_EMBEDDING_MODEL_ID=amazon.titan-embed-text-v1
+      - TELEPHONY_PROVIDER=mock

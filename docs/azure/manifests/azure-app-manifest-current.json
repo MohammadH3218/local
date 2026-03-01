@@ -1,0 +1,122 @@
+﻿{
+    "@odata.context":  "https://graph.microsoft.com/v1.0/$metadata#applications/$entity",
+    "addIns":  [
+
+               ],
+    "api":  {
+                "acceptMappedClaims":  null,
+                "knownClientApplications":  [
+
+                                            ],
+                "oauth2PermissionScopes":  [
+
+                                           ],
+                "preAuthorizedApplications":  [
+
+                                              ],
+                "requestedAccessTokenVersion":  null
+            },
+    "appId":  "4beb149c-f51c-45e4-93f0-82882f50a3bc",
+    "appRoles":  [
+
+                 ],
+    "applicationTemplateId":  null,
+    "certification":  null,
+    "createdDateTime":  "2026-01-14T06:27:06Z",
+    "defaultRedirectUri":  null,
+    "deletedDateTime":  null,
+    "description":  null,
+    "disabledByMicrosoftStatus":  null,
+    "displayName":  "HandyCall Calendar Integration",
+    "groupMembershipClaims":  null,
+    "id":  "0ccaaf40-b4c3-437e-b148-0e3fef75fa36",
+    "identifierUris":  [
+
+                       ],
+    "info":  {
+                 "logoUrl":  null,
+                 "marketingUrl":  null,
+                 "privacyStatementUrl":  null,
+                 "supportUrl":  null,
+                 "termsOfServiceUrl":  null
+             },
+    "isDeviceOnlyAuthSupported":  null,
+    "isFallbackPublicClient":  null,
+    "keyCredentials":  [
+
+                       ],
+    "nativeAuthenticationApisEnabled":  null,
+    "notes":  null,
+    "optionalClaims":  null,
+    "parentalControlSettings":  {
+                                    "countriesBlockedForMinors":  [
+
+                                                                  ],
+                                    "legalAgeGroupRule":  "Allow"
+                                },
+    "passwordCredentials":  [
+                                {
+                                    "customKeyIdentifier":  null,
+                                    "displayName":  "HandyCall-Calendar-Secret-20260114",
+                                    "endDateTime":  "2027-01-14T06:27:17Z",
+                                    "hint":  "TTh",
+                                    "keyId":  "8bac2c8a-cad1-4ae3-8a3e-6d53ca7dc361",
+                                    "secretText":  null,
+                                    "startDateTime":  "2026-01-14T06:27:17Z"
+                                }
+                            ],
+    "publicClient":  {
+                         "redirectUris":  [
+
+                                          ]
+                     },
+    "publisherDomain":  "mohammadh3218gmail.onmicrosoft.com",
+    "requestSignatureVerification":  null,
+    "requiredResourceAccess":  [
+                                   {
+                                       "resourceAccess":  [
+                                                              {
+                                                                  "id":  "465a38f9-76ea-45b9-9f6f-4297fe7c17f8",
+                                                                  "type":  "Scope"
+                                                              }
+                                                          ],
+                                       "resourceAppId":  "00000003-0000-0000-c000-000000000000"
+                                   }
+                               ],
+    "samlMetadataUrl":  null,
+    "serviceManagementReference":  null,
+    "servicePrincipalLockConfiguration":  null,
+    "signInAudience":  "AzureADMyOrg",
+    "spa":  {
+                "redirectUris":  [
+
+                                 ]
+            },
+    "tags":  [
+
+             ],
+    "tokenEncryptionKeyId":  null,
+    "uniqueName":  null,
+    "verifiedPublisher":  {
+                              "addedDateTime":  null,
+                              "displayName":  null,
+                              "verifiedPublisherId":  null
+                          },
+    "web":  {
+                "homePageUrl":  null,
+                "implicitGrantSettings":  {
+                                              "enableAccessTokenIssuance":  false,
+                                              "enableIdTokenIssuance":  false
+                                          },
+                "logoutUrl":  null,
+                "redirectUriSettings":  [
+                                            {
+                                                "index":  null,
+                                                "uri":  "https://api.handycall.org/api/v1/calendar-integration/auth/microsoft/callback"
+                                            }
+                                        ],
+                "redirectUris":  [
+                                     "https://api.handycall.org/api/v1/calendar-integration/auth/microsoft/callback"
+                                 ]
+            }
+}

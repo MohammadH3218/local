@@ -1,0 +1,14 @@
+.git
+.deploy
+BundleLogs
+node_modules
+**/node_modules
+dist
+**/dist
+*.log
+*.zip
+Dockerrun.aws.json
+deploy.zip
+voice-bridge-deploy.zip
+voice-bridge-bundle.zip
+backend-tail.txt

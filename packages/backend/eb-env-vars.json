@@ -1,0 +1,172 @@
+[
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "NODE_ENV",
+    "Value": "production"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "PORT",
+    "Value": "8080"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "API_PREFIX",
+    "Value": "api/v1"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "AWS_REGION",
+    "Value": "us-east-1"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "SES_REGION",
+    "Value": "us-east-1"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "NO_CONTACT_EMAIL",
+    "Value": "no-contact@handycall.org"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "CONTACT_EMAIL_TO",
+    "Value": "hello@handycall.org"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "CONTACT_EMAIL_FROM",
+    "Value": "hello@handycall.org"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "BOOKING_FROM_EMAIL",
+    "Value": "no-contact@handycall.org"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "RESET_TOKEN_TTL_MINUTES",
+    "Value": "30"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "BOOKING_EMAIL_DOMAIN",
+    "Value": "handycall.org"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "DYNAMODB_TABLE_PREFIX",
+    "Value": "handycall_prod_"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "USE_PARAMETER_STORE",
+    "Value": "true"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "APNS_KEY_ID_PARAM",
+    "Value": "/handycall/apns/key-id"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "APNS_TEAM_ID_PARAM",
+    "Value": "/handycall/apns/team-id"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "APNS_BUNDLE_ID_PARAM",
+    "Value": "/handycall/apns/bundle-id"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "APNS_PRIVATE_KEY_PARAM",
+    "Value": "/handycall/apns/private-key"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "APNS_PRIVATE_KEY_BASE64_PARAM",
+    "Value": "/handycall/apns/private-key-base64"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "S3_BUCKET_RECORDINGS",
+    "Value": "handycall-recordings-prod"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "S3_BUCKET_TRANSCRIPTS",
+    "Value": "handycall-transcripts-prod"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "JWT_SECRET",
+    "Value": "your-super-secret-jwt-key-change-in-production"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "JWT_EXPIRES_IN",
+    "Value": "28800"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "REFRESH_TOKEN_SECRET",
+    "Value": "your-super-secret-refresh-token-key"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "REFRESH_TOKEN_EXPIRES_IN",
+    "Value": "2592000"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "CORS_ORIGINS",
+    "Value": "http://localhost:3001,http://localhost:3000,https://handycall.org,https://www.handycall.org"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "AWS_COGNITO_USERS_POOL_ID",
+    "Value": "us-east-1_gBsGtRPnM"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "AWS_COGNITO_USERS_CLIENT_ID",
+    "Value": "3vhh0artoakoardoi4e9rdm3m9"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "AWS_COGNITO_USERS_CLIENT_SECRET",
+    "Value": "8o80uspsmcio3l3djrdnipfherabr8qj6g7jv8jmjhqo2v92cdg"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "AWS_COGNITO_ADMIN_POOL_ID",
+    "Value": "us-east-1_87I5bQxUW"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "AWS_COGNITO_ADMIN_CLIENT_ID",
+    "Value": "3drpp2cjdgtkodoj0d3udh5nu1"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "AWS_COGNITO_ADMIN_CLIENT_SECRET",
+    "Value": "1cue7s8otm0dhtc2davjd0o3p2fuu1k52si7jfvlvd54r9l8rrib"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "BEDROCK_MODEL_ID",
+    "Value": "anthropic.claude-3-5-sonnet-20241022-v2:0"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "BEDROCK_EMBEDDING_MODEL_ID",
+    "Value": "amazon.titan-embed-text-v1"
+  },
+  {
+    "Namespace": "aws:elasticbeanstalk:application:environment",
+    "OptionName": "TELEPHONY_PROVIDER",
+    "Value": "mock"
+  }
+]

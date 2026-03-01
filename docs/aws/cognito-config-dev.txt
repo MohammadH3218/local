@@ -1,0 +1,15 @@
+# HandyCall Cognito Configuration - dev
+# Generated: Fri, Dec 26, 2025 11:47:01 PM
+
+# Admin Pool
+AWS_COGNITO_ADMIN_POOL_ID=us-east-1_87I5bQxUW
+AWS_COGNITO_ADMIN_CLIENT_ID=3drpp2cjdgtkodoj0d3udh5nu1
+AWS_COGNITO_ADMIN_CLIENT_SECRET=1cue7s8otm0dhtc2davjd0o3p2fuu1k52si7jfvlvd54r9l8rrib
+
+# Users Pool
+AWS_COGNITO_USERS_POOL_ID=us-east-1_gBsGtRPnM
+AWS_COGNITO_USERS_CLIENT_ID=3vhh0artoakoardoi4e9rdm3m9
+AWS_COGNITO_USERS_CLIENT_SECRET=8o80uspsmcio3l3djrdnipfherabr8qj6g7jv8jmjhqo2v92cdg
+
+# Region
+AWS_REGION=us-east-1

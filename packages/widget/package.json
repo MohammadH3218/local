@@ -1,0 +1,13 @@
+{
+  "name": "@handycall/widget",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Embeddable HandyCall website chat widget",
+  "main": "dist/widget.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "echo 'Widget bundle is shipped as dist/widget.js'"
+  }
+}

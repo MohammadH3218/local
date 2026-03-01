@@ -1,0 +1,77 @@
+{
+	"id": "0ccaaf40-b4c3-437e-b148-0e3fef75fa36",
+	"acceptMappedClaims": null,
+	"accessTokenAcceptedVersion": null,
+	"addIns": [],
+	"allowPublicClient": null,
+	"appId": "4beb149c-f51c-45e4-93f0-82882f50a3bc",
+	"appRoles": [],
+	"oauth2AllowUrlPathMatching": false,
+	"createdDateTime": "2026-01-14T06:27:06Z",
+	"description": null,
+	"certification": null,
+	"disabledByMicrosoftStatus": null,
+	"groupMembershipClaims": null,
+	"identifierUris": [],
+	"informationalUrls": {
+		"termsOfService": null,
+		"support": null,
+		"privacy": null,
+		"marketing": null
+	},
+	"keyCredentials": [],
+	"knownClientApplications": [],
+	"logoUrl": null,
+	"logoutUrl": null,
+	"name": "HandyCall Calendar Integration",
+	"notes": null,
+	"oauth2AllowIdTokenImplicitFlow": false,
+	"oauth2AllowImplicitFlow": false,
+	"oauth2Permissions": [],
+	"oauth2RequirePostResponse": false,
+	"optionalClaims": null,
+	"orgRestrictions": [],
+	"parentalControlSettings": {
+		"countriesBlockedForMinors": [],
+		"legalAgeGroupRule": "Allow"
+	},
+	"passwordCredentials": [
+		{
+			"customKeyIdentifier": null,
+			"endDate": "2027-01-14T06:27:17Z",
+			"keyId": "8bac2c8a-cad1-4ae3-8a3e-6d53ca7dc361",
+			"startDate": "2026-01-14T06:27:17Z",
+			"value": null,
+			"createdOn": "2026-01-14T06:27:19.6682947Z",
+			"hint": "TTh",
+			"displayName": "HandyCall-Calendar-Secret-20260114"
+		}
+	],
+	"preAuthorizedApplications": [],
+	"publisherDomain": "mohammadh3218gmail.onmicrosoft.com",
+	"replyUrlsWithType": [
+		{
+			"url": "https://api.handycall.org/api/v1/calendar-integration/auth/microsoft/callback",
+			"type": "Web"
+		}
+	],
+	"requiredResourceAccess": [
+		{
+			"resourceAppId": "00000003-0000-0000-c000-000000000000",
+			"resourceAccess": [
+				{
+					"id": "465a38f9-76ea-45b9-9f6f-4297fe7c17f8",
+					"type": "Scope"
+				}
+			]
+		}
+	],
+	"samlMetadataUrl": null,
+	"signInUrl": null,
+	"signInAudience": "AzureADandPersonalMicrosoftAccount",
+	"tags": [],
+	"tokenEncryptionKeyId": null,
+	"api": {
+		"requestedAccessTokenVersion": 2
+	}
+}

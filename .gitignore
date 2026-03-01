@@ -1,0 +1,119 @@
+# Marketplace / consumer feature archive (not for production)
+future-production/
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+*.log
+
+# Production
+build/
+dist/
+.next/
+out/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Expo
+.expo/
+.expo-shared/
+
+# AWS
+.aws-sam/
+samconfig.toml
+
+# Misc
+*.pem
+*.key
+.temp/
+.cache/
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python (for any utility scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+*.egg-info/
+
+# DynamoDB Local
+.dynamodb/
+nul
+*.zip
+*.tsbuildinfo
+*.mkv
+*.tar.gz
+*.bak
+build-output.txt
+query-phone.json
+test-*.json
+
+# Local AWS/Connect exports (generated during debugging/deployment)
+/_*.json
+/_tmp_connect_flow*.json
+/_connect_flow*.json
+/_lex_*.json
+/_kms_policy*.json
+/_lambda_*.json
+/_stream_task_policy*.json
+/_td_register.json
+/_test_flow_*.json
+/content_from_describe.json
+/current-flow.json
+/flow-*.json
+/flow-final.json
+/flow-no-*.json
+/flow-optimized-final.json
+/out*.json
+/payload.json
+/send_sqs.json
+/sqs_create_queue.json
+/stream_task_policy.json
+/svc.json
+/taskdef.json
+
+# Local deployment artifacts / logs
+/BundleLogs/
+/TailLogs*.txt
+/Dockerrun.aws.json
+/Dockerrun.calcom.aws.json
+/log_url.txt
+/logs*.txt
+/ssm-*.json
+/ssm-tmp-*.json
+/r53-*.json
+/rds-postgres-*.log
+/calcom-logs/
+/calcom-*.json
+/calcom-*.txt
+/.deploy/
+**/eb-logs-success/
+/.trash/
+
+# Claude settings (may contain secrets)
+.claude/settings.local.json

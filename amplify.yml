@@ -1,0 +1,33 @@
+version: 1
+applications:
+  - appRoot: packages/web
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - npm ci
+        build:
+          commands:
+            - |
+              echo "Injecting env into .env.production"
+              echo "NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}" >> .env.production
+              echo "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=${NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}" >> .env.production
+              echo "NEXTAUTH_URL=${NEXTAUTH_URL}" >> .env.production
+              echo "NEXTAUTH_SECRET=${NEXTAUTH_SECRET}" >> .env.production
+              echo "COGNITO_REGION=${COGNITO_REGION}" >> .env.production
+              echo "COGNITO_USER_POOL_ID=${COGNITO_USER_POOL_ID}" >> .env.production
+              echo "COGNITO_CLIENT_ID=${COGNITO_CLIENT_ID}" >> .env.production
+              echo "COGNITO_CLIENT_SECRET=${COGNITO_CLIENT_SECRET}" >> .env.production
+              echo "COGNITO_AUTH_DOMAIN=${COGNITO_AUTH_DOMAIN}" >> .env.production
+              echo "COGNITO_GOOGLE_IDP=${COGNITO_GOOGLE_IDP}" >> .env.production
+              echo "COGNITO_APPLE_IDP=${COGNITO_APPLE_IDP}" >> .env.production
+              npm run build
+      artifacts:
+        baseDirectory: .next
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+          - .next/cache/**/*
+    ssr: true

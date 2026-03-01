@@ -1,0 +1,24 @@
+{
+  "name": "handycall-voice-bridge",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Twilio Media Streams ↔ OpenAI Realtime bridge for HandyCall",
+  "main": "dist/minimal.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/minimal.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "@aws-sdk/client-ssm": "^3.965.0",
+    "twilio": "^5.9.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/ws": "^8.5.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}

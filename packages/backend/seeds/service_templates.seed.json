@@ -1,0 +1,470 @@
+{
+    "version": "1.0",
+    "templates": [
+        {
+            "template_id": "tmpl_mechanic_v1",
+            "name": "Auto Repair / Mechanic",
+            "category": "auto",
+            "base_system_prompt": "You are the phone receptionist for {company_name}. Be friendly, concise, and helpful. You can have normal conversation and answer general questions. Your main job is to understand the customer's need and schedule an appointment if they want one. Collect only necessary info. The caller may interrupt, change details, or correct themselves—update your collected fields without restarting.\n\nRules:\n- Ask clarifying questions only when needed.\n- If the customer asks about past bookings, use list_appointments_by_phone.\n- Before booking: summarize the details and ask for confirmation. Only call create_booking if the user confirms.\n- If a specific time is requested, check availability. If unavailable, suggest 2-3 nearby options.\n- Never ask for the customer's phone number; it is derived from caller ID.\n",
+            "intake_schema": {
+                "required": [
+                    "full_name",
+                    "service_request_type",
+                    "vehicle_make",
+                    "vehicle_model",
+                    "vehicle_year",
+                    "issue_summary",
+                    "preferred_time"
+                ],
+                "optional": [
+                    "email",
+                    "zip"
+                ],
+                "conditional": {
+                    "zip": {
+                        "ask_if": "company.requires_service_area_check == true OR company.is_mobile_service == true"
+                    }
+                }
+            },
+            "booking_defaults": {
+                "duration_minutes": 60,
+                "buffer_minutes": 10
+            },
+            "tool_policy": {
+                "require_confirm": true,
+                "require_zip_check": false,
+                "allowed_tools": [
+                    "knowledge_search",
+                    "get_availability",
+                    "create_booking",
+                    "list_appointments_by_phone",
+                    "cancel_appointment",
+                    "reschedule_appointment",
+                    "create_lead",
+                    "save_call"
+                ]
+            }
+        },
+        {
+            "template_id": "tmpl_pest_control_v1",
+            "name": "Pest Control",
+            "category": "home",
+            "base_system_prompt": "You are the phone receptionist for {company_name} (pest control). You can chat normally and answer questions, but your priority is to understand the pest issue and schedule service.\n\nRules:\n- Ask for ZIP first if service area checks are enabled.\n- After ZIP, call check_service_area. If ineligible, apologize and end politely.\n- Collect only required info.\n- Before booking: summarize and confirm; only then call create_booking.\n- If the customer asks about prior appointments, use list_appointments_by_phone.\n",
+            "intake_schema": {
+                "required": [
+                    "zip",
+                    "full_name",
+                    "pest_type_or_symptoms",
+                    "where_seen",
+                    "severity",
+                    "preferred_time",
+                    "address"
+                ],
+                "optional": [
+                    "email"
+                ],
+                "conditional": {
+                    "address": {
+                        "ask_if": "intent == 'book'"
+                    }
+                }
+            },
+            "booking_defaults": {
+                "duration_minutes": 60,
+                "buffer_minutes": 15
+            },
+            "tool_policy": {
+                "require_confirm": true,
+                "require_zip_check": true,
+                "allowed_tools": [
+                    "check_service_area",
+                    "knowledge_search",
+                    "get_availability",
+                    "create_booking",
+                    "list_appointments_by_phone",
+                    "cancel_appointment",
+                    "reschedule_appointment",
+                    "create_lead",
+                    "save_call"
+                ]
+            }
+        },
+        {
+            "template_id": "tmpl_plumbing_v1",
+            "name": "Plumbing",
+            "category": "home",
+            "base_system_prompt": "You are the receptionist for {company_name} (plumbing). Be efficient. Allow normal conversation. Diagnose the request at a high level and book.\n\nRules:\n- Ask ZIP only if service area checks are enabled.\n- Collect minimal details: issue type + urgency + location in home.\n- Confirm-before-booking.\n",
+            "intake_schema": {
+                "required": [
+                    "full_name",
+                    "issue_type",
+                    "urgency",
+                    "service_address",
+                    "preferred_time"
+                ],
+                "optional": [
+                    "zip",
+                    "email",
+                    "photos_link"
+                ],
+                "conditional": {
+                    "zip": {
+                        "ask_if": "company.requires_service_area_check == true"
+                    }
+                }
+            },
+            "booking_defaults": {
+                "duration_minutes": 60,
+                "buffer_minutes": 15
+            },
+            "tool_policy": {
+                "require_confirm": true,
+                "require_zip_check": false,
+                "allowed_tools": [
+                    "check_service_area",
+                    "knowledge_search",
+                    "get_availability",
+                    "create_booking",
+                    "list_appointments_by_phone",
+                    "cancel_appointment",
+                    "reschedule_appointment",
+                    "create_lead",
+                    "save_call"
+                ]
+            }
+        },
+        {
+            "template_id": "tmpl_hvac_v1",
+            "name": "HVAC",
+            "category": "home",
+            "base_system_prompt": "You are the receptionist for {company_name} (HVAC). Gather minimal info to route and schedule: system type, symptom, urgency.\n\nRules:\n- Confirm-before-booking.\n- If emergency language (gas smell, burning smell), advise immediate safety steps and offer earliest slot.\n",
+            "intake_schema": {
+                "required": [
+                    "full_name",
+                    "system_type",
+                    "symptoms",
+                    "urgency",
+                    "service_address",
+                    "preferred_time"
+                ],
+                "optional": [
+                    "zip",
+                    "email",
+                    "last_service_date"
+                ],
+                "conditional": {
+                    "zip": {
+                        "ask_if": "company.requires_service_area_check == true"
+                    }
+                }
+            },
+            "booking_defaults": {
+                "duration_minutes": 90,
+                "buffer_minutes": 15
+            },
+            "tool_policy": {
+                "require_confirm": true,
+                "require_zip_check": false,
+                "allowed_tools": [
+                    "check_service_area",
+                    "knowledge_search",
+                    "get_availability",
+                    "create_booking",
+                    "list_appointments_by_phone",
+                    "cancel_appointment",
+                    "reschedule_appointment",
+                    "create_lead",
+                    "save_call"
+                ]
+            }
+        },
+        {
+            "template_id": "tmpl_electrical_v1",
+            "name": "Electrical",
+            "category": "home",
+            "base_system_prompt": "You are the receptionist for {company_name} (electrical). Keep it safe: if danger is suspected, advise emergency steps.\n\nRules:\n- Confirm-before-booking.\n- Avoid deep troubleshooting; collect symptoms and urgency.\n",
+            "intake_schema": {
+                "required": [
+                    "full_name",
+                    "issue_summary",
+                    "urgency",
+                    "service_address",
+                    "preferred_time"
+                ],
+                "optional": [
+                    "zip",
+                    "email"
+                ],
+                "conditional": {
+                    "zip": {
+                        "ask_if": "company.requires_service_area_check == true"
+                    }
+                }
+            },
+            "booking_defaults": {
+                "duration_minutes": 60,
+                "buffer_minutes": 10
+            },
+            "tool_policy": {
+                "require_confirm": true,
+                "require_zip_check": false
+            }
+        },
+        {
+            "template_id": "tmpl_cleaning_v1",
+            "name": "House Cleaning",
+            "category": "home",
+            "base_system_prompt": "You are the receptionist for {company_name} (cleaning). Quote ranges if asked, but focus on booking an estimate or service.\n\nRules:\n- Ask square footage + # beds/baths.\n- Confirm-before-booking.\n",
+            "intake_schema": {
+                "required": [
+                    "full_name",
+                    "home_size_sqft",
+                    "num_beds",
+                    "num_baths",
+                    "service_address",
+                    "preferred_time"
+                ],
+                "optional": [
+                    "pets",
+                    "frequency",
+                    "zip"
+                ]
+            },
+            "booking_defaults": {
+                "duration_minutes": 120,
+                "buffer_minutes": 30
+            },
+            "tool_policy": {
+                "require_confirm": true,
+                "require_zip_check": true
+            }
+        },
+        {
+            "template_id": "tmpl_landscaping_v1",
+            "name": "Landscaping / Lawn Care",
+            "category": "home",
+            "base_system_prompt": "You are the receptionist for {company_name} (landscaping). Focus on scheduling a quote or maintenance visit.\n\nRules:\n- Ask for lot size/scope (mowing, design, cleanup).\n- Confirm-before-booking.\n",
+            "intake_schema": {
+                "required": [
+                    "full_name",
+                    "service_type",
+                    "lot_approx_size",
+                    "service_address",
+                    "preferred_time"
+                ],
+                "optional": [
+                    "zip",
+                    "gate_code"
+                ]
+            },
+            "booking_defaults": {
+                "duration_minutes": 30,
+                "buffer_minutes": 10
+            },
+            "tool_policy": {
+                "require_confirm": true,
+                "require_zip_check": true
+            }
+        },
+        {
+            "template_id": "tmpl_locksmith_v1",
+            "name": "Locksmith",
+            "category": "emergency",
+            "base_system_prompt": "You are the receptionist for {company_name} (locksmith). Verify if emergency (locked out) vs appointment.\n\nRules:\n- If locked out, prioritize speed. Ask location immediately.\n- Confirm pricing range if required by company policy.\n",
+            "intake_schema": {
+                "required": [
+                    "full_name",
+                    "situation",
+                    "is_emergency",
+                    "location_address"
+                ],
+                "optional": [
+                    "zip",
+                    "car_make_model"
+                ]
+            },
+            "booking_defaults": {
+                "duration_minutes": 45,
+                "buffer_minutes": 15
+            },
+            "tool_policy": {
+                "require_confirm": true,
+                "require_zip_check": false
+            }
+        },
+        {
+            "template_id": "tmpl_towing_v1",
+            "name": "Towing Service",
+            "category": "auto",
+            "base_system_prompt": "You are the dispatcher for {company_name} (towing). Get location and safety status immediately.\n\nRules:\n- Safety first: 'Are you in a safe location?'\n- Get exact location + car details.\n",
+            "intake_schema": {
+                "required": [
+                    "full_name",
+                    "is_safe",
+                    "pickup_location",
+                    "dropoff_location",
+                    "vehicle_desc"
+                ],
+                "optional": [
+                    "insurance_provider"
+                ]
+            },
+            "booking_defaults": {
+                "duration_minutes": 60,
+                "buffer_minutes": 20
+            },
+            "tool_policy": {
+                "require_confirm": true,
+                "require_zip_check": false
+            }
+        },
+        {
+            "template_id": "tmpl_roofing_v1",
+            "name": "Roofing",
+            "category": "home",
+            "base_system_prompt": "You are the receptionist for {company_name} (roofing). Schedule inspection/quote.\n\nRules:\n- Ask age of roof and issue (leak, replacement).\n- Confirm-before-booking.\n",
+            "intake_schema": {
+                "required": [
+                    "full_name",
+                    "issue_summary",
+                    "roof_age_approx",
+                    "service_address",
+                    "preferred_time"
+                ],
+                "optional": [
+                    "insurance_claim"
+                ]
+            },
+            "booking_defaults": {
+                "duration_minutes": 60,
+                "buffer_minutes": 15
+            },
+            "tool_policy": {
+                "require_confirm": true,
+                "require_zip_check": true
+            }
+        },
+        {
+            "template_id": "tmpl_medical_spa_v1",
+            "name": "Medical Spa / Aesthetics",
+            "category": "health",
+            "base_system_prompt": "You are the receptionist for {company_name}. Be polite, discreet, and upscale.\n\nRules:\n- Book consultation or specific treatment.\n- Do not give medical advice.\n",
+            "intake_schema": {
+                "required": [
+                    "full_name",
+                    "treatment_interest",
+                    "is_new_client",
+                    "preferred_time"
+                ],
+                "optional": [
+                    "phone_number_verification"
+                ]
+            },
+            "booking_defaults": {
+                "duration_minutes": 45,
+                "buffer_minutes": 10
+            },
+            "tool_policy": {
+                "require_confirm": true
+            }
+        },
+        {
+            "template_id": "tmpl_dental_v1",
+            "name": "Dentist",
+            "category": "health",
+            "base_system_prompt": "You are the receptionist for {company_name} (dental). Handle new patient vs existing.\n\nRules:\n- Ask insurance (PPO/HMO/Cash) if required.\n- Emergency pain -> prioritize.\n",
+            "intake_schema": {
+                "required": [
+                    "full_name",
+                    "visit_reason",
+                    "is_new_patient",
+                    "insurance_type",
+                    "preferred_time"
+                ],
+                "optional": [
+                    "date_of_birth"
+                ]
+            },
+            "booking_defaults": {
+                "duration_minutes": 60,
+                "buffer_minutes": 10
+            },
+            "tool_policy": {
+                "require_confirm": true
+            }
+        },
+        {
+            "template_id": "tmpl_legal_v1",
+            "name": "Law Firm / Attorney",
+            "category": "professional",
+            "base_system_prompt": "You are the intake specialist for {company_name}. Be professional and confidential.\n\nRules:\n- Brief case summary (do not ask for sensitive details on phone).\n- Schedule consultation.\n",
+            "intake_schema": {
+                "required": [
+                    "full_name",
+                    "case_type",
+                    "brief_summary",
+                    "preferred_time"
+                ],
+                "optional": [
+                    "court_date_if_any"
+                ]
+            },
+            "booking_defaults": {
+                "duration_minutes": 30,
+                "buffer_minutes": 10
+            },
+            "tool_policy": {
+                "require_confirm": true
+            }
+        },
+        {
+            "template_id": "tmpl_salon_v1",
+            "name": "Hair Salon / Barber",
+            "category": "beauty",
+            "base_system_prompt": "You are the receptionist for {company_name}. Be trendy and friendly.\n\nRules:\n- Ask for stylist preference if any.\n- Ask for specific service (cut, color, blowdry).\n",
+            "intake_schema": {
+                "required": [
+                    "full_name",
+                    "service_list",
+                    "stylist_pref",
+                    "preferred_time"
+                ],
+                "optional": [
+                    "hair_length"
+                ]
+            },
+            "booking_defaults": {
+                "duration_minutes": 60,
+                "buffer_minutes": 5
+            },
+            "tool_policy": {
+                "require_confirm": true
+            }
+        },
+        {
+            "template_id": "tmpl_general_v1",
+            "name": "General Appointment",
+            "category": "general",
+            "base_system_prompt": "You are the receptionist for {company_name}. Help the caller book an appointment.\n\nRules:\n- Collect name, reason, and time.\n- Confirm details.\n",
+            "intake_schema": {
+                "required": [
+                    "full_name",
+                    "service_request_type",
+                    "issue_summary",
+                    "service_address",
+                    "preferred_time"
+                ],
+                "optional": [
+                    "email"
+                ]
+            },
+            "booking_defaults": {
+                "duration_minutes": 30,
+                "buffer_minutes": 5
+            },
+            "tool_policy": {
+                "require_confirm": true
+            }
+        }
+    ]
+}

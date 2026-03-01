@@ -1,0 +1,22 @@
+{
+  "name": "handycall-realtime-controller",
+  "version": "0.1.0",
+  "private": true,
+  "description": "HandyCall Realtime SIP controller (tenant resolve + session.update + tool relay)",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/ws": "^8.5.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
+

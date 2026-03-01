@@ -1,0 +1,41 @@
+name: HandyCall
+options:
+  minimumXcodeGenVersion: 2.44.1
+  createIntermediateGroups: true
+configs:
+  Debug: debug
+  Release: release
+targets:
+  HandyCall:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: Sources
+    info:
+      path: Sources/Support/Info.plist
+      properties:
+        CFBundleDisplayName: HandyCall
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIBackgroundModes:
+          - remote-notification
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: org.handycall.app
+        PRODUCT_NAME: HandyCall
+        SWIFT_VERSION: 6.0
+        MARKETING_VERSION: 1.0
+        CURRENT_PROJECT_VERSION: 1
+        GENERATE_INFOPLIST_FILE: NO
+        CODE_SIGN_STYLE: Automatic
+schemes:
+  HandyCall:
+    build:
+      targets:
+        HandyCall: all
+    run:
+      config: Debug
+    archive:
+      config: Release

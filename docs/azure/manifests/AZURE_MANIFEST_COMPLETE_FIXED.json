@@ -1,0 +1,29 @@
+{
+  "id": "YOUR_APP_OBJECT_ID",
+  "appId": "4beb149c-f51c-45e4-93f0-82882f50a3bc",
+  "displayName": "HandyCall Calendar Integration",
+  "signInAudience": "AzureADandPersonalMicrosoftAccount",
+  "api": {
+    "requestedAccessTokenVersion": 2
+  },
+  "requiredResourceAccess": [
+    {
+      "resourceAppId": "00000003-0000-0000-c000-000000000000",
+      "resourceAccess": [
+        {
+          "id": "465a38f9-76ea-45b9-9f6f-4297fe7c17f8",
+          "type": "Scope"
+        }
+      ]
+    }
+  ],
+  "web": {
+    "redirectUris": [
+      "https://api.handycall.org/api/v1/calendar-integration/auth/microsoft/callback"
+    ],
+    "implicitGrantSettings": {
+      "enableIdTokenIssuance": false,
+      "enableAccessTokenIssuance": false
+    }
+  }
+}
